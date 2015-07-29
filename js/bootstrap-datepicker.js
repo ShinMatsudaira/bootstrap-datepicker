@@ -1813,8 +1813,8 @@
 				D: dates[language].daysShort[date.getUTCDay()],
 				DD: dates[language].days[date.getUTCDay()],
 				m: date.getUTCMonth() + 1,
-				M: dates[language].monthsShort[date.getUTCMonth()],
-				MM: dates[language].months[date.getUTCMonth()],
+				M: dates[language].monthsShort[(date.getUTCMonth()+1)%12],
+				MM: dates[language].months[(date.getUTCMonth()+1)%12],
 				yy: date.getUTCFullYear().toString().substring(2),
 				yyyy: date.getUTCFullYear()
 			};
